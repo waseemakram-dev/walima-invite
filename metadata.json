@@ -1,6 +1,8 @@
 {
-  "name": "Attique & Umaira — Royal Wedding Invitation",
-  "description": "Luxury royal digital wedding invitation for Dr. Hafiz Muhammad Attique Zahid & Umaira Mehmood Khan, inspired by European editorial and South Asian royal aesthetics.",
+  "name": "Attique & Umaira — Walima Invitation",
+  "description": "Walima reception invitation for Dr. Hafiz Muhammad Attique Zahid and Umaira Mehmood Khan. Sunday, 1 November 2026: reception 7 PM and dinner 8 PM at The Grand Palace Banquet Hall, New Central Jail Road, Bahawalpur.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

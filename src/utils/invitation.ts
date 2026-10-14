@@ -19,7 +19,7 @@ function foldLine(line: string): string {
   return result + current;
 }
 export function calendarText(now = new Date()) {
-  const lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Attique and Umaira//Wedding Invitation//EN', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH'];
+  const lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Attique and Umaira//Walima Invitation//EN', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH'];
   for (const event of wedding.events) {
     const venue = wedding.venues.find(v => v.id === event.venueId)!;
     lines.push('BEGIN:VEVENT', `UID:${event.id}-2026@attique-umaira.invitation`, `DTSTAMP:${utc(now.toISOString())}`, `DTSTART:${utc(event.start)}`, `SUMMARY:${escapeCalendar(`Attique & Umaira - ${event.name}`)}`, `LOCATION:${escapeCalendar(`${venue.title}, ${venue.address}, Pakistan`)}`, `DESCRIPTION:${escapeCalendar(event.times.map(t => `${t.label}: ${t.time} (Pakistan Standard Time)`).join('\n'))}`, 'END:VEVENT');
@@ -31,7 +31,7 @@ export function downloadCalendar() {
   const url = URL.createObjectURL(new Blob([calendarText()], { type: 'text/calendar;charset=utf-8' }));
   const link = document.createElement('a');
   link.href = url;
-  link.download = 'attique-umaira-wedding.ics';
+  link.download = 'attique-umaira-walima.ics';
   link.click();
   window.setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
